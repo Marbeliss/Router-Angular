@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'router-angular';
+  title = 'Deemo1';
+  enlace = 'perfil'
+
+   constructor(
+    private router: Router
+   ){
+
+   }
+
+  irCursos(){
+  this.router.navigate(['cursos'])
+  }
 }
+
